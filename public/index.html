@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Private-by-design dictation and editable document preparation without accounts.">
+  <title>Cloud Legal Stenographer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the work area</a>
+  <header class="masthead">
+    <div><p class="eyebrow">Anonymous document workspace</p><h1>Cloud Legal Stenographer</h1></div>
+    <p class="lede">Turn speech or audio into reviewed text, then place it in an editable Word document. Nothing is filed, signed, or saved by this application.</p>
+  </header>
+  <main id="main">
+    <div id="error-summary" class="message error" role="alert" tabindex="-1" hidden></div>
+    <div id="status" class="message" role="status" aria-live="polite">Choose a method and template. You can type at any time.</div>
+
+    <section class="step" aria-labelledby="step1"><div class="number">1</div><div class="step-body">
+      <h2 id="step1">Choose a transcription method</h2>
+      <fieldset class="choice-row"><legend class="sr-only">Transcription method</legend>
+        <label><input type="radio" name="method" value="speech" checked> Browser dictation</label>
+        <label><input type="radio" name="method" value="byok"> Use my API key</label>
+      </fieldset>
+      <label for="language">Speech language</label><select id="language"><option value="en-US">English (United States)</option><option value="en-IN">English (India)</option><option value="hi-IN">Hindi</option><option value="mr-IN">Marathi</option></select>
+      <p id="speech-disclosure" class="notice">Your browser controls speech recognition and may process audio using its own service. This application cannot guarantee whether that processing is local or remote. Do not dictate confidential information unless you accept the browser service's terms.</p>
+    </div></section>
+
+    <section class="step" aria-labelledby="step2"><div class="number">2</div><div class="step-body">
+      <h2 id="step2">Enter an API key if required</h2><p id="key-not-needed">Not needed for browser dictation.</p>
+      <div id="key-panel" hidden>
+        <div class="grid two"><label>Provider<select id="provider"><option value="groq">Groq</option><option value="mistral">Mistral</option></select></label><label>Model<select id="model"></select></label></div>
+        <label for="provider-key">Your provider API key</label><div class="inline"><input id="provider-key" type="password" autocomplete="off" autocapitalize="off" spellcheck="false"><button id="toggle-key" type="button" class="secondary">Show</button><button id="remove-key" type="button" class="secondary">Remove</button></div>
+        <p>Your key is used only for the current transcription request. It is not saved by this application. Refresh or close the page to remove it from the browser's memory.</p>
+        <p>For this method, your key and audio pass temporarily through this application's HTTPS server to the provider you select. We do not intentionally save them. The key is also cleared after each completed, failed or canceled attempt. Browser extensions, your device and cloud infrastructure are outside this application's deletion guarantees.</p>
+        <p class="notice">This application does not charge you. External transcription providers may apply their own limits or charges. Check the provider's current terms before use.</p>
+        <p><a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer">Groq API keys</a> · <a href="https://console.groq.com/settings/limits" target="_blank" rel="noopener noreferrer">Groq limits</a> · <a href="https://docs.mistral.ai/admin/identity-access/api-keys" target="_blank" rel="noopener noreferrer">Mistral API keys</a> · <a href="https://docs.mistral.ai/admin/billing-usage/usage-limits" target="_blank" rel="noopener noreferrer">Mistral limits</a></p>
+      </div>
+    </div></section>
+
+    <section class="step" aria-labelledby="step3"><div class="number">3</div><div class="step-body">
+      <h2 id="step3">Choose a document template</h2>
+      <label for="template-select">Built-in template</label><select id="template-select"><option value="">Choose a template</option></select>
+      <details><summary>Upload my template pair</summary><p>Your Word template and settings file are sent temporarily for validation and document generation. They are not added to the public template list.</p><div class="grid two"><label>Word template (.docx)<input id="custom-docx" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label><label>Settings (.json)<input id="custom-json" type="file" accept=".json,application/json"></label></div><button id="validate-custom" type="button">Validate uploaded pair</button></details>
+      <p id="template-status">No template selected.</p>
+    </div></section>
+
+    <section class="step" aria-labelledby="step4"><div class="number">4</div><div class="step-body">
+      <h2 id="step4">Record or upload audio</h2>
+      <div id="speech-panel"><div class="actions"><button id="speech-start" type="button">Start speaking</button><button id="speech-stop" type="button" class="secondary" disabled>Stop</button></div><p id="interim" aria-live="off" class="interim"></p></div>
+      <div id="audio-panel" hidden><p>Maximum 8 MiB and 10 minutes. Supported: WAV, MP3, FLAC, OGG, WEBM; Groq also supports M4A/MP4.</p><div class="actions"><button id="record-start" type="button">Record audio</button><button id="record-stop" type="button" class="secondary" disabled>Stop recording</button><label class="file-button">Upload audio<input id="audio-file" type="file" accept="audio/*,.webm,.wav,.mp3,.flac,.ogg,.m4a,.mp4"></label></div><audio id="audio-playback" controls hidden></audio><p id="audio-meta">No audio selected.</p><div class="actions"><button id="remove-audio" type="button" class="secondary" disabled>Remove audio</button><button id="transcribe" type="button" disabled>Transcribe</button><button id="cancel-request" type="button" class="secondary" hidden>Cancel</button></div><label class="check"><input id="unknown-duration" type="checkbox"> I understand the duration could not be checked and the provider may charge for actual use.</label><label class="check"><input id="relay-consent" type="checkbox"> I own or may use this key and understand the key and audio go through this server to the selected provider.</label></div>
+    </div></section>
+
+    <section class="step" aria-labelledby="step5"><div class="number">5</div><div class="step-body">
+      <h2 id="step5">Review the transcript</h2><label for="transcript">Editable transcript</label><textarea id="transcript" rows="10" maxlength="100000" placeholder="Dictate, transcribe, type, or paste text here."></textarea><div class="actions"><button id="copy-transcript" type="button" class="secondary">Copy</button><button id="clear-transcript" type="button" class="secondary">Clear</button><button id="download-transcript" type="button" class="secondary">Download TXT</button></div>
+    </div></section>
+
+    <section class="step" aria-labelledby="step6"><div class="number">6</div><div class="step-body">
+      <h2 id="step6">Fill document details</h2><p>Copy only facts you have checked. The application does not infer names, dates, claims, or legal strategy.</p><form id="document-form" novalidate><div id="field-container"><p>Choose and validate a template first.</p></div><label class="check"><input id="review-confirmed" type="checkbox"> I have reviewed these document details.</label></form>
+    </div></section>
+
+    <section class="step" aria-labelledby="step7"><div class="number">7</div><div class="step-body">
+      <h2 id="step7">Preview and download</h2><p class="notice">Templates are formatting aids, not legal advice. Check every name, number, date and statement before use. No document is filed or signed by this application.</p><p>Content preview. Fonts, line breaks and page breaks may differ from the downloaded Word document. Review the DOCX before use.</p><div id="preview" class="paper" aria-label="Document content preview"><p>Your preview will appear here.</p></div><div class="actions"><button id="refresh-preview" type="button" class="secondary" disabled>Refresh preview</button><button id="generate-docx" type="button" disabled>Generate editable DOCX</button><button id="print-document" type="button" class="secondary" disabled>Print / Save as PDF</button></div>
+    </div></section>
+  </main>
+  <footer><p>Your work is kept only on this page. Download it before refreshing or closing. Browser warnings cannot prevent every loss of work.</p><button id="clear-all" type="button" class="secondary">Clear all work</button></footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

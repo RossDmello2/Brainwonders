@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0",
+  "id": "fictional_objection",
+  "version": "1.0.0",
+  "name": "Fictional objection layout - demonstration only",
+  "description": "A completely fictional layout demonstrating configurable fields and numbered paragraphs. Not approved for filing.",
+  "status": "example",
+  "review_note": "No court or legal reviewer has approved this example.",
+  "disclaimer": "Dummy content only. Replace this pair with a reviewed template before any real use.",
+  "fields": [
+    {
+      "id": "court_name",
+      "placeholder": "COURT_NAME",
+      "label": "Court or forum name",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "jurisdiction",
+      "placeholder": "JURISDICTION",
+      "label": "Jurisdiction",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "case_type",
+      "placeholder": "CASE_TYPE",
+      "label": "Case type",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "case_number",
+      "placeholder": "CASE_NUMBER",
+      "label": "Case number",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "case_year",
+      "placeholder": "CASE_YEAR",
+      "label": "Case year",
+      "help": "Enter the year; it is never inferred.",
+      "required": true,
+      "type": "integer",
+      "default": null,
+      "validation": {
+        "minimum": 1900,
+        "maximum": 2200
+      }
+    },
+    {
+      "id": "applicant_name",
+      "placeholder": "APPLICANT_NAME",
+      "label": "Applicant name",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "applicant_role",
+      "placeholder": "APPLICANT_ROLE",
+      "label": "Applicant role",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "respondent_name",
+      "placeholder": "RESPONDENT_NAME",
+      "label": "Respondent name",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "respondent_role",
+      "placeholder": "RESPONDENT_ROLE",
+      "label": "Respondent role",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "salutation",
+      "placeholder": "SALUTATION",
+      "label": "Salutation",
+      "help": "",
+      "required": false,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "introduction",
+      "placeholder": "INTRODUCTION",
+      "label": "Introductory paragraph",
+      "help": "",
+      "required": true,
+      "type": "textarea",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 20000
+      }
+    },
+    {
+      "id": "heading",
+      "placeholder": "HEADING",
+      "label": "Document heading",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "closing",
+      "placeholder": "CLOSING",
+      "label": "Closing paragraph",
+      "help": "",
+      "required": true,
+      "type": "textarea",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 20000
+      }
+    },
+    {
+      "id": "document_date",
+      "placeholder": "DOCUMENT_DATE",
+      "label": "Document date",
+      "help": "Choose the date yourself.",
+      "required": true,
+      "type": "date",
+      "default": "",
+      "display_format": "DD/MM/YYYY"
+    },
+    {
+      "id": "signatory_name",
+      "placeholder": "SIGNATORY_NAME",
+      "label": "Signatory name",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "signatory_role",
+      "placeholder": "SIGNATORY_ROLE",
+      "label": "Signatory role",
+      "help": "",
+      "required": true,
+      "type": "text",
+      "default": "",
+      "validation": {
+        "min_length": 0,
+        "max_length": 1000
+      }
+    },
+    {
+      "id": "reference_copy",
+      "placeholder": "REFERENCE_COPY",
+      "label": "Reference copy designation",
+      "help": "Demonstration field only.",
+      "required": false,
+      "type": "boolean",
+      "default": null,
+      "true_text": "Reference copy requested",
+      "false_text": "No reference copy requested"
+    }
+  ],
+  "sections": [
+    {
+      "id": "items",
+      "placeholder": "ITEMS",
+      "label": "Numbered items",
+      "help": "Add only text you have reviewed.",
+      "min_rows": 1,
+      "max_rows": 20,
+      "row_fields": [
+        {
+          "id": "text",
+          "placeholder": "TEXT",
+          "label": "Item text",
+          "help": "",
+          "required": true,
+          "type": "textarea",
+          "default": "",
+          "validation": {
+            "min_length": 0,
+            "max_length": 20000
+          }
+        },
+        {
+          "id": "status",
+          "placeholder": "STATUS",
+          "label": "Item status",
+          "help": "Choose a label; the application makes no decision.",
+          "required": true,
+          "type": "select",
+          "default": "",
+          "options": [
+            {
+              "value": "draft",
+              "label": "Draft"
+            },
+            {
+              "value": "reviewed",
+              "label": "Reviewed"
+            }
+          ]
+        }
+      ],
+      "default_rows": [],
+      "numbering": {
+        "style": "decimal",
+        "start": 1,
+        "prefix": "",
+        "suffix": ".",
+        "placeholder": "NUMBER"
+      }
+    }
+  ],
+  "preview": {
+    "language": "en",
+    "direction": "ltr",
+    "page": {
+      "size": "A4",
+      "orientation": "portrait",
+      "margins_mm": {
+        "top": 25,
+        "right": 25,
+        "bottom": 25,
+        "left": 25
+      }
+    },
+    "font_family": "Times New Roman",
+    "font_size_pt": 12,
+    "line_height": 1.5,
+    "paragraph_space_after_pt": 6,
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "{{ COURT_NAME }}",
+        "level": 1,
+        "align": "center"
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ JURISDICTION }}",
+        "align": "center",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ CASE_TYPE }} - {{ CASE_NUMBER }} / {{ CASE_YEAR }}",
+        "align": "center",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ APPLICANT_NAME }} ({{ APPLICANT_ROLE }})",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ RESPONDENT_NAME }} ({{ RESPONDENT_ROLE }})",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ SALUTATION }}",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "heading",
+        "text": "{{ HEADING }}",
+        "level": 2,
+        "align": "center"
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ INTRODUCTION }}",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "repeat",
+        "section": "ITEMS",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "{{ row.NUMBER }} {{ row.TEXT }}",
+            "align": "left",
+            "preserve_newlines": true
+          },
+          {
+            "type": "paragraph",
+            "text": "Status: {{ row.STATUS }}",
+            "align": "left",
+            "preserve_newlines": true
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ CLOSING }}",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Date: {{ DOCUMENT_DATE }}",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ SIGNATORY_NAME }}",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ SIGNATORY_ROLE }}",
+        "align": "left",
+        "preserve_newlines": true
+      },
+      {
+        "type": "paragraph",
+        "text": "{{ REFERENCE_COPY }}",
+        "align": "left",
+        "preserve_newlines": true
+      }
+    ]
+  },
+  "output": {
+    "docx_filename_pattern": "example-{{ CASE_NUMBER }}.docx",
+    "transcript_filename_pattern": "example-transcript.txt",
+    "print_title_pattern": "Example {{ CASE_NUMBER }}"
+  }
+}

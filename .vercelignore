@@ -1,0 +1,13 @@
+.venv
+.pytest_cache
+.local-run
+__pycache__
+*.pyc
+tests
+cloud-legal-stenographer-spec-pack
+.git
+.gitignore
+requirements-dev.txt
+README.md
+docs
+scripts

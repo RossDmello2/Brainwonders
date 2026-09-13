@@ -1,0 +1,33 @@
+{
+  "fields": {
+    "court_name": "Example Forum",
+    "jurisdiction": "Demonstration Region",
+    "case_type": "Sample Matter",
+    "case_number": "DEMO-000",
+    "case_year": 2040,
+    "applicant_name": "Example Party A",
+    "applicant_role": "Example role A",
+    "respondent_name": "Example Party B",
+    "respondent_role": "Example role B",
+    "salutation": "For demonstration only",
+    "introduction": "This fictional paragraph exists only to test document insertion.",
+    "heading": "Demonstration items",
+    "closing": "End of fictional example. No real submission is intended.",
+    "document_date": "2040-01-02",
+    "signatory_name": "Example Signatory",
+    "signatory_role": "Example capacity",
+    "reference_copy": true
+  },
+  "sections": {
+    "items": [
+      {
+        "text": "First fictional item with no real legal claim.",
+        "status": "draft"
+      },
+      {
+        "text": "Second fictional item with symbols: < > & and a line\nbreak.",
+        "status": "reviewed"
+      }
+    ]
+  }
+}

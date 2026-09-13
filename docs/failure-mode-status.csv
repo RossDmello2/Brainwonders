@@ -1,0 +1,61 @@
+edge_id,failure_mode,status,evidence
+EDGE-001,Web Speech API unavailable,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-002,Browser recognizer automatically stops,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-003,Microphone permission denied,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-004,No microphone,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-005,Recording contains silence,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-006,Background noise,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-007,Unsupported audio format,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-008,Empty uploaded file,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-009,Oversized audio file,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-010,Recording interrupted by phone call,UNVERIFIED_EXTERNAL_ENVIRONMENT,Requires deployed service/account or physical-device behavior.
+EDGE-011,Browser tab moved to background,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-012,Network disconnect,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-013,Slow upload,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-014,Duplicate transcription click,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-015,User cancels request,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-016,Invalid API key,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-017,Expired or revoked key,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-018,Provider quota reached,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-019,Provider rate limit,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-020,Provider timeout,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-021,Provider outage,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-022,Provider changes model ID,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-023,Malformed provider response,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-024,Transcript empty,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-025,Transcript unexpectedly translated,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-026,Refresh with unsaved work,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-027,Malicious HTML pasted,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-028,Template placeholder missing,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-029,Malformed DOCX template,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-030,Document generation fails,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-031,PDF conversion unavailable,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-032,Temporary-file deletion fails,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-033,Sensitive key appears in exception,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-034,Third party attempts open proxy,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-035,Recognition constructor present but service fails,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-036,Permission prompt ignored or late grant after Cancel,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-037,No compatible recording MIME,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-038,Last chunk exceeds recording limit,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-039,Audio duration unknown or forged,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-040,Body sent without Content-Length,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-041,Template DOCX chosen without JSON,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-042,Invalid template JSON or unknown schema version,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-043,ZIP bomb or active Word feature,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-044,Forbidden Jinja expression or split tag,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-045,Repeat row limit or invalid typed value,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-046,Unsafe output filename,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-047,Template replaced while generation in flight,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-048,Backend cold start or temporary suspension,UNVERIFIED_EXTERNAL_ENVIRONMENT,Requires deployed service/account or physical-device behavior.
+EDGE-049,Hosting signup demands payment or paid default,UNVERIFIED_EXTERNAL_ENVIRONMENT,Requires deployed service/account or physical-device behavior.
+EDGE-050,Back-forward cache restores a page,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-051,Wrong production CORS origin,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-052,Cross-request credential contamination attempt,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-053,Free bandwidth or service-initiated traffic suspension,UNVERIFIED_EXTERNAL_ENVIRONMENT,Requires deployed service/account or physical-device behavior.
+EDGE-054,Print canceled or PDF destination missing,UNVERIFIED_EXTERNAL_ENVIRONMENT,Requires deployed service/account or physical-device behavior.
+EDGE-055,Download blocked/canceled,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-056,Catalog entry missing one asset,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-057,Invalid XML character or lone surrogate in value,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-058,Provider response grows beyond allowed bytes,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-059,Document child hangs or pipe blocks,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.
+EDGE-060,User text edited before late transcription result,PASS,Automated unit/integration/Chromium coverage or deliberate source/contract inspection.

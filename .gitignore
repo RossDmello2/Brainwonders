@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+test-results/
+playwright-report/
+.local-run/
+tests/fixtures/generated-inspection.docx
+.env
+
+.vercel

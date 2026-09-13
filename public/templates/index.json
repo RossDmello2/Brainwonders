@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "templates": [
+    {
+      "id": "fictional_objection",
+      "version": "1.0.0",
+      "name": "Fictional objection layout - demonstration only",
+      "description": "Example numbered paragraphs; not approved for filing.",
+      "docx_path": "fictional_objection/1.0.0/template.docx",
+      "config_path": "fictional_objection/1.0.0/template.json"
+    },
+    {
+      "id": "fictional_table",
+      "version": "1.0.0",
+      "name": "Fictional tabular layout - demonstration only",
+      "description": "Example dynamic table; not approved for filing.",
+      "docx_path": "fictional_table/1.0.0/template.docx",
+      "config_path": "fictional_table/1.0.0/template.json"
+    }
+  ]
+}

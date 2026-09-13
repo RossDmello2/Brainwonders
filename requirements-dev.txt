@@ -1,0 +1,5 @@
+-r backend/requirements.lock
+pip-audit==2.10.1
+playwright==1.62.0
+pytest==9.1.1
+pytest-asyncio==1.4.0
